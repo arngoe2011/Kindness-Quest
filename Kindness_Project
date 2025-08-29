@@ -1,0 +1,191 @@
+import random, time
+from colorama import Fore, Style, init
+init(autoreset=True)
+
+
+
+def kindness_initial():
+    print('\n \n \n')
+    print(Fore.BLUE + Style.BRIGHT + '''Hello, and Welcome to ''' + Fore.LIGHTGREEN_EX +  Style.BRIGHT + '''"Are You As Kind As You Think You Are?" ''' + Fore.BLUE + Style.BRIGHT + '''
+Here are the RULES: You will have to answer 8 tricky questions that must be carefully thought of.  For each one you get right, you will recieve a letter. Unscramble the 8 letter word to recieve the final key to win! You got this :)''')
+    print('')
+    ok = input(Fore.LIGHTYELLOW_EX + 'When you have read all the rules, type "ok": ')
+    while ok != 'ok':
+        print(Fore.LIGHTYELLOW_EX + 'Please only type in "ok". Thank you!')
+        ok = input(Fore.LIGHTYELLOW_EX + 'When you have read all the rules, type "ok": ')
+
+    print(Fore.RESET + "\n" + "="*100)
+    print("SCENARIO 1: HOME 🏠")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + 'You are at home on a Saturday, and your parents are not home. Suddenly, you see your younger brother trip down the stairs and cry. Do you...')
+    print(Fore.LIGHTWHITE_EX + '1) laugh')
+    print(Fore.LIGHTWHITE_EX + '2) text your parents, then help your brother')
+    print(Fore.LIGHTWHITE_EX + '3) help your brother, then text your parents')
+    print(Fore.LIGHTWHITE_EX + '''4) call 911 and tell them your brother isn't feeling well''')
+    home = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while home.lower() != 'three' and home != '3':
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'What is the priority at the moment? Hmm ...')
+        home = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'Great job! Your first letter:' + Fore.LIGHTWHITE_EX + ' "D" ') 
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + "Let's visit the school now!")
+    print('')
+    kindness_a()
+def kindness_a():
+    print("\n" + "="*100)
+    print("SCENARIO 2: SCHOOL 🎒")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + 'You notice a little kid is trying to grab their lunchbox someone put on the roof of the playground Do you...')
+    print(Fore.LIGHTWHITE_EX + '5) Help them get the lunchbox')
+    print(Fore.LIGHTWHITE_EX + '6) Put the lunchbox higher')
+    print(Fore.LIGHTWHITE_EX + '7) Call the police on the little kid because of stranger danger')
+    print(Fore.LIGHTWHITE_EX + '8) Walk away. quickly.')
+    littlekid = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while littlekid.lower() != 'five' and littlekid != '5':
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + "It's just a little kid! Are you sure ...")
+        littlekid = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'What a great person! Another letter for you: ' + Fore.LIGHTWHITE_EX + '"S"')
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + "Let's walk to your friend's house")
+    print('')
+    return kindness_b()
+def kindness_b():
+    print("\n" + "="*100)
+    print("SCENARIO 3: FRIEND'S HOUSE 🤜 🤛")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + '''You are at your Friend's house when suddenly, they start badmouthing one of your other friends behind their back! Do you...''')
+    print(Fore.LIGHTWHITE_EX + '''9)  Punch them in the face and stomp away''')
+    print(Fore.LIGHTWHITE_EX + '''10) Agree and switch the topic quickly''')
+    print(Fore.LIGHTWHITE_EX + '''11) "Well, maybe that's true about them, I guess..." ''')
+    print(Fore.LIGHTWHITE_EX + '''12) Tell them you don't feel comfortable talking about someone you like behind their back''')
+    badmouth = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while badmouth != '12' and badmouth.lower() != 'twelve':
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Try some support for the friend!')
+        badmouth = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'Great job! Your third letter: ' + Fore.LIGHTWHITE_EX + '"N"')
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + "Let's visit the Senior Home now!")
+    print('')
+    return kindness_c()
+def kindness_c():
+    print("\n" + "="*100)
+    print("SCENARIO 4: SENIOR HOUSE 👴")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + '''You are volunteering at a senior house when you see that a particularilly older senior is having
+    trouble bending down to reach his newspaper he dropped. Do you...''')
+    print(Fore.LIGHTWHITE_EX + '''13) Pick it up and start doing the Crossword... ''')
+    print(Fore.LIGHTWHITE_EX + '''14) Hand it over ''')
+    print(Fore.LIGHTWHITE_EX + '''15) Push it further ''')
+    print(Fore.LIGHTWHITE_EX + '''16) Throw it in his lap and walk away ''')
+    senior = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while senior.lower() != 'fourteen' and senior != '14':
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Come on, help the elderly!')
+        senior = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'Great job! Your fourth letter: ' + Fore.LIGHTWHITE_EX + '"E"')
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + "Let's visit the Gas Station now!")
+    print('')
+    return kindness_d()
+def kindness_d():
+    print("\n" + "="*100)
+    print("SCENARIO 5: GAS STATION ⛽")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + '''You are walking in the gas station shop when all of a sudden, you see a 12 year old hide a pack of gum in his pocket and walk out! Do you...''')
+    print(Fore.LIGHTWHITE_EX + '''17) Tackle the kid and steal the gum ''')
+    print(Fore.LIGHTWHITE_EX + '''18) Ignore, ignore, ignore ...''')
+    print(Fore.LIGHTWHITE_EX + '''19) Tell the kid that it's not fair to steal and have him return the gum or pay for it ''')
+    print(Fore.LIGHTWHITE_EX + '''20) Beg him for a few pieces of your favorite flavored gum ''')
+    stealer = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while stealer != '19' and stealer.lower() != 'nineteen':
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'What could go wrong for standing up? ...')
+        stealer = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'Great job! Your fifth letter: ' + Fore.LIGHTWHITE_EX + '"another S!"')
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + "Let's visit the park now!")
+    print('')
+    return kindness_e()
+def kindness_e():
+    print("\n" + "="*100)
+    print("SCENARIO 6: PARK 🛝")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + '''You are taking a stroll through the park when you see an someone drop a plastic fork and not pick it up! Do you...''')
+    print(Fore.LIGHTWHITE_EX + '''21) Inform them that they dropped the fork and tell them not to pollute the environment ''')
+    print(Fore.LIGHTWHITE_EX + '''22) IGNORE, INGORE, IGNORE, IGNORE, ... ''')
+    print(Fore.LIGHTWHITE_EX + '''23) Pick it up for them ''')
+    print(Fore.LIGHTWHITE_EX + '''24) Stab them with the fork they dropped ''')
+    pollute = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while pollute != '21' and pollute.lower() != 'twenty one' and pollute.lower() != "twenty-one":
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Be an upstander and try again!')
+        pollute = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'Great job! Your sixth letter: ' + Fore.LIGHTWHITE_EX + '"I"')
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + "Let's visit the restaurant now!")
+    print('')
+    return kindness_f()
+def kindness_f():
+    print("\n" + "="*100)
+    print("SCENARIO 7: RESTAURANT 🍽️")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + '''You are dining at a fancy restaurant when you all of a sudden remember a commitement you made to help your brother with his homework in 15 minutes! Do you...''')
+    print(Fore.LIGHTWHITE_EX + '''25) Dine and text him that you can't come today ''')
+    print(Fore.LIGHTWHITE_EX + '''26) Ghost your brother so you don't have to face him ''')
+    print(Fore.LIGHTWHITE_EX + '''27) Apologize and ask if you can help him after you eat''')
+    print(Fore.LIGHTWHITE_EX + '''28) Push him out of your mind, its fiiiinnee''')
+    homework = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while homework != '27' and homework.lower() != 'twenty seven' and homework.lower() != 'twenty-seven':
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Be a good sibling!')
+        homework = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'Great job! Your seventh letter: ' + Fore.LIGHTWHITE_EX + '"another N!"')
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + "Let's visit the final stop now! Only one more to go.")
+    print('')
+    return kindness_ending()
+def kindness_ending():
+    print("\n" + "="*100)
+    print("SCENARIO 8: APPARTEMENT 🌇")
+    print("="*100 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + '''After a long day of helping people from here to there, you are finally going to your appartement.
+     On the way there, you see someone having a horrible day, crying on the side of the street. Do you ...''')
+    print(Fore.LIGHTWHITE_EX + '''29) IGNORE, INGORE, IGNORE, IGNORE, ...  ''')
+    print(Fore.LIGHTWHITE_EX + '''30) PayPal them 1,000,000 dollars from your bank account''')
+    print(Fore.LIGHTWHITE_EX + '''31) Ask them if they're doing ok ''')
+    print(Fore.LIGHTWHITE_EX + '''32) "It's dark, maybe I'm just imagining it" ... ''')
+    stranger = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    while stranger != '31' and stranger.lower() != 'thirty one' and stranger.lower() != "thirty-one":
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + "It's the FINAl act of kindness!!! You can do this.")
+        stranger = input(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Enter the number you think is correct: ')
+    print('')
+    print(Fore.MAGENTA + Style.BRIGHT + 'Great job! Your final letter: ' + Fore.LIGHTWHITE_EX + '"K"')
+    print('')
+
+
+    print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + 'Here are all of your letters: ' + Fore.RESET)
+    letters = ['D', 'S', 'N', 'E', 'S', 'I', 'N', 'K']
+    random.shuffle(letters)
+    for l in letters:
+        print(l, end=' ', flush=True)
+        time.sleep(0.2)
+    KINDNESS = input(Fore.LIGHTYELLOW_EX + Style.BRIGHT + '''\n \nRearrange these to make the final word and win the show: ''')
+    while KINDNESS.lower() != 'kindness':
+        print(Fore.LIGHTRED_EX + 'Try again!')
+        KINDNESS = input(Fore.LIGHTYELLOW_EX + Style.BRIGHT + 'Here are all of your letters: ' + Fore.LIGHTWHITE_EX + Style.BRIGHT + 'D, S, N, E, S, I, N, and K.' + Fore.LIGHTYELLOW_EX + Style.BRIGHT + '''
+Rearrange these to make the final word and win the show: ''')
+    print("")
+    print(Fore.GREEN + Style.BRIGHT + '''What about it? Just kidding, you are the OFFICIAL WINNER of this game show!
+Your prize will be sent to you within 1,000,000 buisiness years. No guarantees, of course.''')
+    print("\n \n" + "="*50)
+    print("🎉🎉🎉 CONGRATULATIONS! 🎉🎉🎉")
+    print("="*50 + "\n")
+    print(Fore.LIGHTCYAN_EX + Style.BRIGHT + "Remember: Kindness is free, but priceless.")
+    print('\n \n ')
+    again = input('''Play again? (yes/no): ''')
+    if again.lower() == "yes" or again.lower() == "yeah" or again.lower() == "yep":
+        return kindness_initial()
+    elif again.lower() == "no" or again.lower() == "nope" or again.lower() == "nah":
+        print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + "Thanks for playing! \n\n")
+        return None
+    else :
+        print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + "I'll assume this is a no. Thank's for playing! \n\n")
+
+
+kindness_initial()
